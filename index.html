@@ -43,14 +43,13 @@ nav .inner{padding:0;width:100%}
 .bg-glow{width:300px;height:300px;top:-15vh}
 .bg-grid{background-size:25px 25px}
 .mobile-toggle{display:flex!important}
-.nav-links{display:none!important;position:fixed;top:0;left:0;right:0;bottom:0;height:100vh;background:rgba(8,8,10,.7);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);flex-direction:column;align-items:center;justify-content:center;padding:5rem 2rem 3rem;gap:.6rem;border:none;z-index:999;box-shadow:none}
-.nav-links.open{display:flex!important;animation:fadeNav .2s ease}
-@keyframes fadeNav{from{opacity:0}to{opacity:1}}
-.nav-links a,.nav-links .nav-link-btn,.nav-links .nav-cta{font-size:1.05rem;padding:.7rem 1.2rem;width:260px;max-width:80vw;text-align:center;display:block;border-radius:12px;color:#e4e4e7!important}
+.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,10,.75);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);flex-direction:column;align-items:center;justify-content:center;padding:4rem 1.5rem 2rem;gap:.55rem;z-index:999}
+.nav-links.open{display:flex}
+.nav-links a,.nav-links .nav-link-btn,.nav-links .nav-cta{font-size:1rem;padding:.65rem 1rem;width:260px;max-width:85vw;text-align:center;display:block;border-radius:12px;color:#e4e4e7!important}
 .nav-links a{font-weight:500;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
 .nav-links a:hover{background:rgba(124,58,237,.15);border-color:rgba(124,58,237,.3);color:#c084fc!important}
-.nav-links .nav-cta{background:#7c3aed;color:#fff!important;border:none;padding:.7rem 1.2rem;width:260px;max-width:80vw;text-align:center;font-weight:600!important;margin-top:.15rem;border-radius:12px}
-.nav-links .nav-link-btn{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.2);color:#f5f5f7!important;padding:.7rem 1.2rem;width:260px;max-width:80vw;text-align:center;font-weight:500!important;margin-top:.15rem;border-radius:12px}
+.nav-links .nav-cta{background:#7c3aed;color:#fff!important;border:none;padding:.65rem 1rem;width:260px;max-width:85vw;text-align:center;font-weight:600!important;border-radius:12px}
+.nav-links .nav-link-btn{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.2);color:#f5f5f7!important;padding:.65rem 1rem;width:260px;max-width:85vw;text-align:center;font-weight:500!important;border-radius:12px}
 .hero-content{padding:0 .5rem}
 .hero{padding:6rem .5rem 4rem;min-height:auto}
 .hero h1{font-size:1.8rem;letter-spacing:-.02em;margin-bottom:1rem}
@@ -81,20 +80,20 @@ section{padding:2.5rem 1rem}
 .diff-item h4{font-size:.95rem}
 .diff-item p{font-size:.8rem}
 .forum-preview{grid-template-columns:1fr;gap:1.5rem;margin-top:1.5rem}
-.forum-topics{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1rem .8rem}
-.forum-topics h4{font-size:.9rem;margin-bottom:.6rem;padding:0 .4rem;color:#e4e4e7;letter-spacing:-.01em}
-.topic{display:flex;align-items:center;padding:.6rem .4rem;margin:0;border-bottom:1px solid rgba(255,255,255,.04);gap:.6rem}
+.forum-topics{background:transparent;padding:0;display:flex;flex-direction:column;gap:.6rem}
+.forum-topics h4{font-size:.9rem;margin-bottom:.2rem;padding:0;color:#e4e4e7}
+.topic{display:flex;align-items:center;padding:.7rem .7rem;margin:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;gap:.7rem}
 .topic:last-child{border-bottom:none}
 .topic-info{flex:1;min-width:0}
-.topic-info .title{font-size:.82rem;line-height:1.25;font-weight:500;margin-bottom:.05rem}
+.topic-info .title{font-size:.82rem;line-height:1.3;font-weight:500;margin-bottom:.1rem}
 .topic-info .title a{color:#d4d4d8!important;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.topic-info .stats{font-size:.62rem;color:#636363;display:flex;gap:.8rem;margin-top:.05rem}
-.topic-badge{font-size:.55rem;padding:.15rem .4rem;flex-shrink:0;font-weight:600;background:#7c3aed;border-radius:6px;color:#fff}
+.topic-info .stats{font-size:.62rem;color:#636363;display:flex;gap:.8rem}
+.topic-badge{font-size:.55rem;padding:.15rem .45rem;flex-shrink:0;font-weight:600;background:#7c3aed;border-radius:20px;color:#fff}
 .forum-stats{grid-template-columns:1fr 1fr;gap:.8rem}
-.forum-stats .stat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:.8rem .6rem;text-align:center;transition:all .2s}
+.forum-stats .stat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:.8rem .6rem;text-align:center}
 .stat-card .num{font-size:1.2rem;font-weight:800;color:#a78bfa}
-.stat-card .desc{font-size:.65rem;color:#636363;margin-top:.15rem;line-height:1.2}
-.forum-stats .btn-secondary{grid-column:1/-1;padding:.7rem;font-size:.85rem;border-radius:12px;margin-top:.2rem}
+.stat-card .desc{font-size:.65rem;color:#636363;margin-top:.15rem}
+.forum-stats .btn-secondary{grid-column:1/-1;padding:.7rem;font-size:.85rem;border-radius:12px}
 footer .inner{grid-template-columns:1fr;gap:1.5rem;text-align:center}
 footer h5{font-size:.8rem;margin-bottom:.6rem}
 footer p,footer a{font-size:.75rem}
