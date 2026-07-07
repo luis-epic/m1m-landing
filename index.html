@@ -90,18 +90,18 @@ section .inner{width:100%;max-width:100%;padding:0;box-sizing:border-box}
 .forum-preview{grid-template-columns:1fr;gap:1rem;margin-top:1.2rem;max-width:100%;overflow:hidden}
 .forum-topics{background:transparent;padding:0;display:flex;flex-direction:column;gap:.5rem;max-width:100%;overflow:hidden}
 .forum-topics h4{font-size:.85rem;margin-bottom:.1rem;padding:0;color:#e4e4e7}
-.topic{display:flex;align-items:center;padding:.55rem .6rem;margin:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;gap:.5rem}
+.topic{display:flex;align-items:center;padding:.5rem .6rem;margin:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;gap:.4rem}
 .topic:last-child{border-bottom:none}
 .topic-info{flex:1;min-width:0}
-.topic-info .title{font-size:.78rem;line-height:1.25;font-weight:500;margin-bottom:.05rem}
-.topic-info .title a{color:#d4d4d8!important;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;max-width:100%;word-break:break-word}
-.topic-info .stats{font-size:.6rem;color:#636363;display:flex;gap:.5rem}
-.topic-badge{font-size:.5rem;padding:.1rem .35rem;flex-shrink:0;font-weight:600;background:#7c3aed;border-radius:20px;color:#fff}
-.forum-stats{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
-.forum-stats .stat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:.6rem .4rem;text-align:center}
-.stat-card .num{font-size:1.1rem;font-weight:800;color:#a78bfa}
-.stat-card .desc{font-size:.6rem;color:#636363;margin-top:.1rem}
-.forum-stats .btn-secondary{grid-column:1/-1;padding:.6rem;font-size:.8rem;border-radius:10px}
+.topic-info .title{font-size:.8rem;line-height:1.2;font-weight:500;max-width:100%}
+.topic-info .title a{color:#d4d4d8!important;display:block;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.topic-info .stats{font-size:.6rem;color:#636363;display:flex;gap:.4rem}
+.topic-badge{font-size:.5rem;padding:.08rem .3rem;flex-shrink:0;font-weight:600;background:#7c3aed;border-radius:20px;color:#fff}
+.forum-stats{display:grid;grid-template-columns:1fr 1fr;gap:.4rem}
+.forum-stats .stat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:.5rem .3rem;text-align:center}
+.stat-card .num{font-size:1rem;font-weight:700;color:#a78bfa}
+.stat-card .desc{font-size:.6rem;color:#636363;margin-top:.05rem}
+.forum-stats .btn-secondary{grid-column:1/-1;padding:.5rem;font-size:.8rem;border-radius:10px}
 footer .inner{grid-template-columns:1fr;gap:1.2rem;text-align:center}
 footer h5{font-size:.75rem;margin-bottom:.4rem}
 footer p,footer a{font-size:.7rem}
@@ -221,6 +221,9 @@ footer a:hover{color:#a78bfa}footer .bottom{border-top:1px solid rgba(255,255,25
 #mobile-menu{display:none}
 @media(max-width:768px){
 #mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,10,.78);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);flex-direction:column;align-items:center;justify-content:center;padding:4rem 1.5rem 2rem;gap:.5rem;z-index:1000}
+.menu-close-btn{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#e4e4e7;font-size:1.1rem;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1001}
+.menu-close-btn:hover{background:rgba(124,58,237,.2);border-color:#7c3aed;color:#c084fc}
+
 #mobile-menu.open{display:flex}
 #mobile-menu a{font-size:1rem;padding:.6rem 1rem;width:260px;max-width:85vw;text-align:center;display:block;border-radius:10px;color:#e4e4e7!important;text-decoration:none;font-weight:500;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
 #mobile-menu a:hover{background:rgba(124,58,237,.15);border-color:rgba(124,58,237,.3);color:#c084fc!important}
@@ -250,6 +253,7 @@ footer a:hover{color:#a78bfa}footer .bottom{border-top:1px solid rgba(255,255,25
   </div>
 </nav>
 <div id="mobile-menu">
+  <button class="menu-close-btn" onclick="document.getElementById('mobile-menu').classList.remove('open');document.getElementById('mobileToggle').classList.remove('open')">✕</button>
   <a href="#cursos">Cursos</a>
   <a href="#mcp">MCP</a>
   <a href="#blog">Blog</a>
