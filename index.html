@@ -43,7 +43,7 @@ nav .inner{padding:0;width:100%;box-sizing:border-box}
 .bg-glow{width:300px;height:300px;top:-15vh}
 .bg-grid{background-size:25px 25px}
 .mobile-toggle{display:flex!important}
-.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,10,.75);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);flex-direction:column;align-items:center;justify-content:center;padding:4rem 1.5rem 2rem;gap:.55rem;z-index:999}
+.nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,10,.75);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);flex-direction:column;align-items:center;justify-content:center;padding:4rem 1.5rem 2rem;gap:.55rem;isolation:isolate;z-index:999}
 .nav-links.open{display:flex}
 .nav-links a,.nav-links .nav-link-btn,.nav-links .nav-cta{font-size:1rem;padding:.65rem 1rem;width:260px;max-width:85vw;text-align:center;display:block;border-radius:12px;color:#e4e4e7!important}
 .nav-links a{font-weight:500;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
@@ -94,7 +94,7 @@ section .inner{width:100%;max-width:100%;padding:0;box-sizing:border-box}
 .topic:last-child{border-bottom:none}
 .topic-info{flex:1;min-width:0}
 .topic-info .title{font-size:.78rem;line-height:1.25;font-weight:500;margin-bottom:.05rem}
-.topic-info .title a{color:#d4d4d8!important;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topic-info .title a{color:#d4d4d8!important;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .topic-info .stats{font-size:.6rem;color:#636363;display:flex;gap:.5rem}
 .topic-badge{font-size:.5rem;padding:.1rem .35rem;flex-shrink:0;font-weight:600;background:#7c3aed;border-radius:20px;color:#fff}
 .forum-stats{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
@@ -226,6 +226,8 @@ footer a:hover{color:#a78bfa}footer .bottom{border-top:1px solid rgba(255,255,25
 <nav>
   <div class="inner">
     <div class="logo"><img src="data:image/png;base64,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" alt="m1m" style="height:30px;width:auto"></div>
+    
+    
     <ul class="nav-links" id="navLinks">
       <li><a href="#cursos">Cursos</a></li>
       <li><a href="#mcp">MCP</a></li>
@@ -237,6 +239,8 @@ footer a:hover{color:#a78bfa}footer .bottom{border-top:1px solid rgba(255,255,25
     <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+
 
 <section class="hero" id="hero-section">
   <div id="three-container"></div>
